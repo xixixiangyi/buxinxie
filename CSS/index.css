@@ -1,0 +1,159 @@
+.Container {
+    margin: 0 auto;
+    width: 1920px;
+    height: 1080px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: initial;
+    letter-spacing:1px;
+    background: url(../Images/容器背景图.jpg);
+}
+.Header img {
+    width: 100%;
+    height: 100%;
+}
+/* 容器板心 */
+.Container-W {
+    width: 1886px;
+    margin: 0 auto;
+    font-family: unset;
+}
+.shadow {
+    -moz-box-shadow:0 0 10px #06c;
+     -webkit-box-shadow:0 0 10px #06c;
+     box-shadow:0 0 10px #06c;
+}
+a {
+    text-decoration: none;
+}
+/* 中间部分 */
+.Main {
+    display: flex;
+    height: 850px;
+}
+.main-left,.main-right {
+    flex: 1;
+    height: 850px;
+    margin-top: 10px;
+    box-shadow: 1px #1a3f81;
+    /* background-color: white; */
+}
+.main-content {
+    flex: 2;
+    height: 850px;
+    margin: 0 20px 0 20px;
+    /* background-color: pink; */
+}
+/* 中间左上板块 */
+.main-left-containertop {
+    margin: 0 auto;
+    width: 424px;
+    height: 460px;
+    margin-top: 8px;
+    /* background-color: pink; */
+}
+#text {
+    display: flex;
+    flex-direction: column;
+    height: 352px;
+}
+#text div {
+    flex: 1;
+    font-size: 14px;
+    border-bottom: 1px dotted #153879;
+}
+#text2 {
+    display: flex;
+    flex-direction: column;
+    /* height: ; */
+}
+#text2 div {
+    flex: 1;
+    font-size: 14px;
+    border-bottom: 1px dotted #153879;
+
+}
+#text3 {
+    display: flex;
+    flex-direction: column;
+}
+#text3 div {
+    flex: 1;
+    font-size: 14px;
+    border-bottom: 1px dotted #153879;
+}
+/* 中间左下板块 */
+.main-left-containerbottom {
+    margin: 0 auto;
+    width: 424px;
+    height: 380px;
+    margin-top: 8px;
+    /* background-color: green; */
+}
+/* 中间-中心搜索板块 */
+.search {
+    height: 60px;
+    border: 1px solid #1a3f81;
+    /* background-color:yellow; */
+}
+.main-bottom-left {
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 424px;
+    height: 240px;
+    /* background-color: pink; */
+}
+/* 中右 */
+.echer {
+    display: flex;
+    height: 76px;
+}
+.echer div {
+    flex: 1;
+}
+.echer div img {
+    width: 100%;
+    height: 100%;
+}
+/* 底部 */
+.Footer {
+    display: flex;
+    flex-direction: row;
+    height: 128px;
+}
+.Footer div {
+    flex: 1; 
+    position: relative;
+}
+.Footer div img {
+    position: absolute;
+    bottom: 16px;
+    left: 40px;
+}
+/* 标题隐藏部分 */
+.txt {
+    font-size: 14px;
+}
+.txt a {
+    display: block;
+    text-decoration:none;
+    text-align: right;
+}
+.txt span {
+    text-align:left;
+    color: white;
+}
+.active{
+ color: white;
+}
+.tab{
+ display: none;
+}
+.tabactive{
+ display: block;
+}
+.txt{
+ display: none;
+}
+.txtactive{
+ display: block;
+}

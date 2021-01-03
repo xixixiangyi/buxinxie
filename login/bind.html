@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		    body {
+				background: url(./gb.jpg);
+			}
+			.warp {
+				text-align: center;
+				margin-top: 300px;
+			}
+			
+			.warp>div {
+				margin: 20px 0;
+			}
+			
+			input {
+				width: 200px;
+				height: 30px;
+				border-radius: 10px;
+				padding: 0 10px;
+				outline: none;
+			}
+			
+			button {
+				width: 80px;
+				height: 30px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="warp">
+			<div style="color: white;">
+				ping： <input type="" name="" id="ping" value="" />
+			</div>
+			<div>
+				<button id="login">绑定</button>
+			</div>
+		</div>
+
+		<script src="js/jquery-2.0.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			localStorage.setItem('home','王宇')
+			//获取从index.html传递 的参数
+			// function getQueryString(params) {
+			// 	var reg = new RegExp('(^|&)' + params + '=([^&]*)(&|$)', 'i')
+			// 	var r = window.location.search.substr(1).match(reg)
+			// 	if(r != null) return decodeURI(r[2])
+			// 	return null
+			// }
+			// var id=	getQueryString('username');
+			// var login = document.getElementById('login')
+			
+			$(login).click(function(){
+				// var user = $("#ping")
+				var ping = $("#ping").val()
+				console.log(ping)
+				// window.location.href='../index.html'
+				$.ajax({
+					type:'GET',
+					data:{
+						ping
+					},
+					url:"http://192.168.211.1:91/getKeySn",
+					success:function(data){
+						console.log(data)
+						//接口成功后，存储name值，首页用 data.userName是首页显示的用户名
+						// localStorage.setItem('home',data.userName)
+						// window.location.href='../index.html'
+						if(data.code=='0'){
+							//登陆成功，在本地存储key值,data.key就是key值
+							var obj = {}
+							obj.ping = data.ping
+							localStorage.setItem('bindkey',obj)
+							//如果有本地存储的值跳转到首页
+							if(localStorage.getItem('bindkey')){
+								window.location.href='../index.html'
+							}else {
+								//如果没有绑定，跳转到绑定页面
+								// window.location.href='./login.html'
+							}
+						}
+					},
+					error: function(err){
+						console.log(err)
+						console.log('请求出错啦')
+					}
+				})
+			})
+		  // getUid(id);
+			// $('#login').click(function() {
+			// 	if(!$('#ping').val()) {
+			// 		alert('ping不能为空');
+			// 		return false;
+			// 	}
+			// 	$.ajax({
+			// 		type: "GET",
+			// 		url: "", //请求 地址
+			// 		data: {
+			// 			keyPing: $('#ping').val() //参数
+			// 		},
+			// 		cache: false,
+			// 		async: true,
+			// 		crossDomain: true,
+			// 		dataType: "json",
+			// 		success: function(data, textStatus, jqXHR) {
+			// 			//...成功后返回 id 
+			// 			getUid(id);
+			// 		},
+			// 		error: function(XMLHttpRequest, textStatus, errorThrown) {
+			// 			alert("请求失败！");
+			// 			getUid("12222");
+			// 		}
+			// 	});
+			// })
+
+			// function getUid(id) {
+			// 	$.ajax({
+			// 		type: "GET",
+			// 		// url: "http://192.168.1.181:8080/demo/go", //请求 地址
+			// 		url: "http://192.168.211.1:91/getKeySn",
+			// 		data: {
+			// 			keyPing: id
+			// 		},
+			// 		cache: false,
+			// 		async: true,
+			// 		crossDomain: true,
+			// 		dataType: "json",
+			// 		success: function(data, textStatus, jqXHR) {
+			// 			//如果返回时true
+			// 			if(data.code == '0') {
+			// 				//...跳转到首页
+			// 				window.location.href='../集成门户首页/index.html'
+			// 			} else {
+			// 				//跳转到绑定页面
+			// 				window.location.href = 'bind.html?id=' + id ;
+			// 			}
+			// 		},
+			// 		error: function(XMLHttpRequest, textStatus, errorThrown) {
+			// 			alert("请求失败！");
+			// 		}
+			// 	});
+			// }
+		</script>
+	</body>
+
+</html>

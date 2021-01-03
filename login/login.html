@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		    body {
+				background: url(./gb.jpg);
+			}
+			.warp {
+				margin-top: 300px;
+				text-align: center;
+			}
+			.warp>div {
+				margin: 20px 0;
+			}
+			input {
+				width: 200px;
+				height: 30px;
+				border-radius: 10px;
+				padding: 0 10px;
+				outline: none;
+			}
+			
+			button {
+				width: 80px;
+				height: 30px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="warp">
+			<div style="color: white;">
+				账号： <input type="" name="" id="name" value="" />
+			</div>
+			<div style="color: white;">
+				密码： <input type="password" name="" id="pwd" value="" />
+			</div>
+			<div style="color: white; display: none;">
+				uId： <span id="id"></span>
+			</div>
+			<div style="color: white;">
+				<button id="bind">登陆</button>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-2.0.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		//获取从index.html传递 的参数
+		function getQueryString(params) {
+			var reg = new RegExp('(^|&)' + params + '=([^&]*)(&|$)', 'i')
+			var r = window.location.search.substr(1).match(reg)
+			if(r != null) return decodeURI(r[2])
+			return null
+		}
+
+		$('#id').text(getQueryString('id'));
+
+		$('#bind').click(function() {
+			if(!$('#name').val()) {
+				alert('账号不能为空');
+				return false;
+			}
+			if(!$('#pwd').val()) {
+				alert('密码不能为空');
+				return false;
+			}
+			window.location.href='../index.html'
+			$.ajax({
+				type: "POST",
+				url: "http://192.168.1.181:8888/demo/binding", //请求 地址
+				data: {
+					name: $('#name').val(), //账号
+					pwd: $('#pwd').val(), //密码
+					keyPing: getQueryString('id')
+				},
+				cache: false,
+				async: true,
+				crossDomain: true,
+				dataType: "json",
+				success: function(data) {
+					if(data.code=='0'){
+						//data.code=='0'代表成功，输入完账号密码跳转到首页
+						obj.name = data.name
+						localStorage.setItem('bindkey',obj)
+						window.location.href='./index.html'
+					}
+				},
+				error: function(XMLHttpRequest, textStatus, errorThrown) {
+					alert("请求失败！");
+				}
+			});
+		})
+	</script>
+
+</html>

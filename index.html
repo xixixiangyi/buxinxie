@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>集成门户新布局</title>
+    <link rel="stylesheet" href="./CSS/index.css">
+    <!-- <link rel="stylesheet" href="./font/阿里汉仪智能黑体AliHYAiHei.ttf"> -->
+    <link rel="stylesheet" href="./swiper/swiper-bundle.min.css">
+</head>
+<style>
+    .gallery-thumbs .swiper-slide {
+      height: 100%;
+      opacity: 0.4;
+    }
+    .gallery-thumbs .swiper-slide-thumb-active {
+      opacity: 1;
+    }
+    .gallery-thumbs .swiper-slide {
+        height: 80%;
+        margin-top: 15px;
+    }
+    .swiper-container{
+    
+    --swiper-navigation-size: 20px;/* 设置按钮大小 */
+  }
+  .swiper-button-next, .swiper-button-prev {
+      top: 60%;
+  }
+</style>
+<body>
+    <div class="Container">
+        <!-- 大容器的版心 -->
+       <div class="Container-W">
+        <!-- 头部 -->
+        <div class="Header" style="height: 102px;position: relative;">
+            <img src="./Images/贴角图/顶部.png" alt="" >
+            <!-- 左侧按钮 -->
+            <div style="display: block;width: 100px;height: 20px;position: absolute;top: 30px;left: 50px;">
+               <div id="leftbtn" style="width: 20px;height: 20px;float: left"><img src="./Images/应用中心.png" alt="" style="width: 100%;height: 100%;"></div>
+               <span style="float: right;color: white;margin-left: 10px;">应用中心</span>
+            </div>
+            <!-- 中间文字 -->
+            <div style="width: 520px;height: 50px; position: absolute;left: 734px;top: 20px;color: white;font-size: 52px;line-height: 40px;">
+                大标题大标题大标题
+            </div>
+            <!-- 右侧按钮 -->
+            <div style="width: 194px;height: 28px;position:absolute;top:20px;right:46px;overflow: hidden;">
+                <div id="rightbtn" style="float: left;margin-top: 7px;position: absolute;"><img src="./Images/信息(1).png" alt="">
+                    <div style="position: absolute;top: -8px;right: -8px;">
+                        <img src="./Images/圆.png" alt="">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- 中间部分 -->
+            <div class="Main">
+                <!-- 中间左边板块 -->
+            <div class="main-left">
+                <!-- 左上 -->
+                <div class="shadow"  style="width: 460px;height: 466px;border: 1px solid #1a3f81;border-radius: 20px; position: relative;">
+                    <div style="width: 20px;height: 20px;position: absolute;top:-2px;left: -2px;"><img src="./Images/贴角图/左上左.png" alt="" style="width: 100%;height: 100%;"></div>
+                    <div style="width: 20px;height: 20px;position:absolute;top:-2px;right:-2px"><img src="./Images/贴角图/左上右.png" alt="" style="width: 100%;height: 100%;"></div>
+                    <div style="width: 20px;height: 20px;position:absolute;bottom:-2px;left:-2px"><img src="./Images/贴角图/左下左.png" alt="" style="width: 100%;height: 100%;"></div>
+                    <div style="width: 20px;height: 20px;position:absolute;bottom:-2px;right:-2px"><img src="./Images/贴角图/左下右.png" alt="" style="width: 100%;height: 100%;"></div>
+                    <div class="main-left-containertop">
+                        <!-- 1 -->
+                        <div class="one two five" style="color: #68d8fe; font-size: 16px;">
+                            <span data-type="1">栏目标题</span>
+                            <span data-type="2">栏目标题</span>
+                            <span data-type="2">栏目标题</span>
+                            <span data-type="2">栏目标题</span>
+                            <span data-type="2">栏目标题</span>
+                        </div>
+                        <!-- 2 -->
+                        <div>
+                            <hr style="height:1px;border:none;border-top:1px solid #1a3f81;" />
+                        </div>
+                        <!-- 3 -->
+                        <div class="one three" style=" height: 28px;line-height: 28px; background-color: #0f2559;color: #68d8fe;font-size: 14px;">
+                            <div class="tab tab1 tabactive" style="font-size: 12px;">
+                                <span class="active">二级栏目</span>
+                                <span>|</span>
+                                <span>二级栏目</span>
+                                <span>|</span>
+                                <span>二级栏目</span>
+                            </div>
+                            <div class="tab tab2"  style="font-size: 12px;">
+                                <span>二级栏目</span>
+                                <span>|</span>
+                                <span>啦啦啦啦</span>
+                                <span>|</span>
+                                <span>二级栏目</span>
+                                <span>|</span>
+                                <span>二级栏目</span>
+                                <span>|</span>
+                                <span>二级栏目</span>
+                            </div>
+                            <div class="tab tab3"  style="font-size: 12px;">
+                                <span>三页栏目</span>
+                                <span>|</span>
+                                <span>三页栏目</span>
+                                <span>|</span>
+                                <span>三页栏目</span>
+                                <span>|</span>
+                                <span>三页栏目</span>
+                            </div>
+                            <div class="tab tab4"  style="font-size: 12px;">
+                                <span>四页栏目</span>
+                                <span>|</span>
+                                <span>二级栏目</span>
+                                <span>|</span>
+                                <span>二级栏目</span>
+                                <span>|</span>
+                                <span>二级栏目</span>
+                            </div>
+                            <div class="tab tab5"  style="font-size: 12px;">
+                                <span>五页栏目</span>
+                                <span>|</span>
+                                <span>二级栏目</span>
+                                <span>|</span>
+                                <span>二级栏目</span>
+                                <span>|</span>
+                                <span>二级栏目</span>
+                                <span>|</span>
+                                <span>二级栏目</span>
+                            </div>
+                            <div class="tab tab6"  style="font-size: 12px;">
+                                <span>六页栏目</span>
+                                <span>|</span>
+                                <span>二级栏目</span>
+                                <span>|</span>
+                                <span>二级栏目</span>
+                            </div>
+                        </div>
+                        <!-- 4 -->
+                        <div id="text">
+                            <div style="line-height: 30px;"><a href="./跳转页面/html/picture-1.html"><span style="color: #9ea8c5">啦啦啦啦德玛西亚啦啦啦啦啦啦啦啦啦</span><span style="float: right;color: #68d8fe;">2020年1月1日</span></a></div>
+                            <div style="line-height: 30px;"><a href="./跳转页面/html/picture-2.html"><span style="color: #9ea8c5">啦啦啦啦德玛西亚啦啦啦啦啦啦啦啦啦</span><span style="float: right;color: #68d8fe;">2020年1月1日</span></a></div>
+                            <div style="line-height: 30px;"><a href="./跳转页面/html/picture-3.html"><span style="color: #9ea8c5">啦啦啦啦德玛西亚啦啦啦啦啦啦啦啦啦</span><span style="float: right;color: #68d8fe;">2020年1月1日</span></a></div>
+                            <div style="line-height: 30px;"><a href="./跳转页面/html/picture-4.html"><span style="color: #9ea8c5">啦啦啦啦德玛西亚啦啦啦啦啦啦啦啦啦</span><span style="float: right;color: #68d8fe;">2020年1月1日</span></a></div>
+                            <div style="line-height: 30px;"><a href="./跳转页面/html/picture-5.html"><span style="color: #9ea8c5">啦啦啦啦德玛西亚啦啦啦啦啦啦啦啦啦</span><span style="float: right;color: #68d8fe;">2020年1月1日</span></a></div>
+                            <div style="line-height: 30px;"><a href="./跳转页面/html/picture-6.html"><span style="color: #9ea8c5">啦啦啦啦德玛西亚啦啦啦啦啦啦啦啦啦</span><span style="float: right;color: #68d8fe;">2020年1月1日</span></a></div>
+                            <div style="line-height: 30px;"><a href="./跳转页面/html/picture-7.html"><span style="color: #9ea8c5">啦啦啦啦德玛西亚啦啦啦啦啦啦啦啦啦</span><span style="float: right;color: #68d8fe;">2020年1月1日</span></a></div>
+                            <div style="line-height: 30px;"><a href="./跳转页面/html/picture-8.html"><span style="color: #9ea8c5">啦啦啦啦德玛西亚啦啦啦啦啦啦啦啦啦</span><span style="float: right;color: #68d8fe;">2020年1月1日</span></a></div>
+                            <div style="line-height: 30px;"><a href="./跳转页面/html/picture-9.html"><span style="color: #9ea8c5">啦啦啦啦德玛西亚啦啦啦啦啦啦啦啦啦</span><span style="float: right;color: #68d8fe;">2020年1月1日</span></a></div>
+                            <div style="line-height: 30px;"><a href="./跳转页面/html/picture-10.html"><span style="color: #9ea8c5">啦啦啦啦德玛西亚啦啦啦啦啦啦啦啦啦</span><span style="float: right;color: #68d8fe;">2020年1月1日</span></a></div>
+                            <div style="line-height: 30px;"><a href="./跳转页面/html/picture-1.html"><span style="color: #9ea8c5">啦啦啦啦德玛西亚啦啦啦啦啦啦啦啦啦</span><span style="float: right;color: #68d8fe;">2020年1月1日</span></a></div>
+                        </div>
+                        <div style="margin-top: 5px;"><a href="#"><span style="color: #c48714;">点击进入标题</span></a><span style="float: right;color: #80838e;">更多</span></div>
+                        <!-- 5 -->
+                        <div></div>
+                    </div>
+                </div>
+                <!-- 左下 -->
+               <div class="shadow" style="width: 460px;height: 364px;border: 1px solid #1a3f81;margin-top:16px;border-radius: 20px; position: relative;">
+                <div style="width: 20px;height: 20px;position: absolute;top: -2px;left: -2px;"><img src="./Images/贴角图/左上左.png" alt=""></div>
+                <div style="width: 20px;height: 20px;position:absolute;top:-2px;right:-2px"><img src="./Images/贴角图/左上右.png" alt="" style="width: 100%;height: 100%;"></div>
+                <div style="width: 20px;height: 20px;position: absolute;bottom: -2px;left: -2px;"><img src="./Images/贴角图/左下左.png" alt="" style="width: 100%;height: 100%;"></div>
+                <div style="width: 20px;height: 20px;position: absolute;bottom: -2px;right: -2px;"><img src="./Images/贴角图/左下右.png" alt="" style="width: 100%;height: 100%;"></div>
+                <div class="main-left-containerbottom">
+                    <!-- 1 -->
+                    <div style="color: #68d8fe; font-size: 16px;">
+                        <span style="color: white;">栏目标题</span>
+                    </div>
+                    <!-- 2 -->
+                    <div>
+                        <hr style="height:1px;border:none;border-top:1px solid #1a3f81;" />
+                    </div>
+                    <!-- 3 -->
+                    <div class="one three" style=" height: 28px;line-height: 28px; background-color: #0f2559;color: #68d8fe;font-size: 14px;">
+                        <div class="tab tab1 tabactive" style="font-size: 12px;">
+                            <span class="active">栏目标题</span>
+                            <span>|</span>
+                            <span>栏目标题</span>
+                            <span>|</span>
+                            <span>栏目标题</span>
+                        </div>
+                    </div>
+                    <!-- 4轮播视频 -->
+                    <div style="margin-top: 5px;">
+                        <!-- <img src="./Images/轮播.png" alt="" style="width: 100%;height: 100%;"> -->
+                        <div class="swiper-container gallery-top">
+                            <div class="swiper-wrapper" style="width: 100%;height: 180px; margin-top: 16px;">
+                                <img class="swiper-slide" style="height: 100%;" src="./swiper/images/nature-1.jpg"></img>
+                                <img class="swiper-slide" style="height: 100%;" src="./swiper/images/nature-2.jpg"></img>
+                                <img class="swiper-slide" style="height: 100%;" src="./swiper/images/nature-3.jpg"></img>
+                                <img class="swiper-slide" style="height: 100%;" src="./swiper/images/nature-4.jpg"></img>
+                            </div>
+                            <!-- Add Arrows -->
+                        </div>
+                        <div class="swiper-container gallery-thumbs">
+                            <div class="swiper-wrapper" style="width:100%;height: 70px;margin-top: 5px;">
+                                <img class="swiper-slide" src="./swiper/images/nature-1.jpg"></img>
+                                <img class="swiper-slide" src="./swiper/images/nature-2.jpg"></img>
+                                <img class="swiper-slide" src="./swiper/images/nature-3.jpg"></img>
+                                <img class="swiper-slide" src="./swiper/images/nature-4.jpg"></img>
+                            </div>
+                        <div class="swiper-button-next swiper-button-white"></div>
+                        <div class="swiper-button-prev swiper-button-white"></div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+            </div>
+                <!-- 中间中心板块 -->
+            <div class="main-content">
+                <!-- 搜索板块 -->
+                <div class="search shadow" style="position: relative;border-radius: 20px; margin-top: 10px;">
+                    <div style="width: 20px;height: 20px;position: absolute;top: -1px;left: -2px;"><img src="./Images/贴角图/搜左上.png" alt="" style="width: 100%;height: 100%;"></div>
+                    <div style="width: 20px;height: 20px;position: absolute;top: -2px;right: -2px;"><img src="./Images/贴角图/搜右上.png" alt="" style="width: 100%;height: 100%;"></div>
+                    <div style="width: 20px;height: 20px;position: absolute;bottom: -1px;left: -2px;"><img src="./Images/贴角图/搜左下.png" alt="" style="width: 100%;height: 100%;"></div>
+                    <div style="width: 20px;height: 20px;position: absolute;bottom: -2px;right: -2px;"><img src="./Images/贴角图/搜右下.png" alt="" style="width: 100%;height: 100%;"></div>
+                    <!-- <input type="text" style="width: 99%;height: 94%;border-radius: 20px;background-color:#1a3f81;"> -->
+                </div>
+                <!-- 地图版块 -->
+                <div class="shadow" style="height: 508px; border: 1px solid #1a3f81;margin-top: 10px;margin-bottom: 10px; position: relative;border-radius: 20px;">
+                    <div style="position: absolute;left: -2px;top: -2px;"><img src="./Images/贴角图/搜左上.png" alt="" style="width: 100%;height: 100%;" ></div>
+                    <div style="position: absolute;right: -2px;top: -2px;"><img src="./Images/贴角图/搜右上.png" alt="" style="width: 100%;height: 100%;" ></div>
+                    <div style="position: absolute;left: -2px;bottom: -2px;"><img src="./Images/贴角图/搜左下.png" alt="" style="width: 100%;height: 100%;" ></div>
+                    <div style="position: absolute;right: -2px;bottom: -2px;"><img src="./Images/贴角图/搜右下.png" alt="" style="width: 100%;height: 100%;" ></div>
+                    <div style="width: 888px; margin: 0 auto;margin-top: 10px;">
+                       <!-- 1 -->
+                       <div class="one two five" style="color: white; font-size: 16px;">
+                        <span data-type="1">栏目标题</span>
+                       </div>
+                       <!-- 2 -->
+                       <div>
+                        <hr style="height:1px;border:none;border-top:1px solid #1a3f81;" />
+                       </div>
+                       <!-- 3 -->
+                       <div class="one three" style=" height: 28px;line-height: 28px; background-color: #0f2559;color: #68d8fe;font-size: 14px;">
+                        <div class="tab tab1 tabactive" style="font-size: 12px;">
+                            <span class="active">栏目标题</span>
+                            <span>|</span>
+                            <span>栏目标题</span>
+                            <span>|</span>
+                            <span>栏目标题</span>
+                        </div>
+                       </div>
+                       <!-- 4 -->
+                       <div class="shadow" style="height: 410px;margin-top: 10px;border-radius: 10px;"><img src="./Images/动态图.gif" alt="" style="width: 100%;height: 100%;border-radius: 10px;"></div>
+                    </div>
+                    
+                </div>
+                <!-- 中下 -->
+                <div style="height: 260px;display: flex; margin-top: 10px;">
+                    <!-- 中下-左 -->
+                  <div class="bottom-left shadow" style="flex: 1;margin-right: 20px;border: 1px solid #1a3f81;position: relative;border-radius: 20px;">
+                    <div style="width: 20px;height: 20px;position: absolute;top: -2px;left: -2px;"><img src="./Images/贴角图/中上左.png" alt="" style="width: 100%;height: 100%;"></div>
+                    <div style="width: 20px;height: 20px;position: absolute;top: -2px;right: -2px;"><img src="./Images/贴角图/中上右.png" alt="" style="width: 100%;height: 100%;"></div>
+                    <div style="width: 20px;height: 20px;position: absolute;bottom: -2px;left: -2px;"><img src="./Images/贴角图/中下左.png" alt="" style="width: 100%;height: 100%;"></div>
+                    <div style="width: 20px;height: 20px;position: absolute;bottom: -2px;right: -2px;"><img src="./Images/贴角图/中下右.png" alt="" style="width: 100%;height: 100%;"></div>
+                    <!-- <div></div>
+                    <div></div>
+                    <div></div> -->
+                     <div class="main-bottom-left">
+                        <!-- 1 -->
+                        <div style="color: #68d8fe; font-size: 16px;">
+                            <span style="color: white;">栏目标题</span>
+                        </div>
+                        <!-- 2 -->
+                        <div>
+                            <hr style="height:1px;border:none;border-top:1px solid #1a3f81;" />
+                        </div>
+                        <!-- 3 -->
+                        <div class="one three" style=" height: 28px;line-height: 28px; background-color: #0f2559;color: #68d8fe;font-size: 14px;">
+                            <div class="tab tab1 tabactive" style="font-size: 12px;">
+                                <span class="active">二级栏目</span>
+                                <span>|</span>
+                                <span>二级栏目</span>
+                                <span>|</span>
+                                <span>二级栏目</span>
+                            </div>
+                        </div>
+                        <!-- 4 -->
+                        <div id="text2">
+                            <div style="line-height: 30px;"><a href="./跳转页面/html/video-1.html"><span style="color: #9ea8c5">啦啦啦啦德玛西亚啦啦啦啦啦啦啦啦啦</span><span style="float: right;color: #68d8fe;">2020年1月1日</span></a></div>
+                            <div style="line-height: 30px;"><a href="./跳转页面/html/video-2.html"><span style="color: #9ea8c5">啦啦啦啦德玛西亚啦啦啦啦啦啦啦啦啦</span><span style="float: right;color: #68d8fe;">2020年1月1日</span></a></div>
+                            <div style="line-height: 30px;"><a href="./跳转页面/html/video-3.html"><span style="color: #9ea8c5">啦啦啦啦德玛西亚啦啦啦啦啦啦啦啦啦</span><span style="float: right;color: #68d8fe;">2020年1月1日</span></a></div>
+                            <div style="line-height: 30px;"><a href="./跳转页面/html/video-4.html"><span style="color: #9ea8c5">啦啦啦啦德玛西亚啦啦啦啦啦啦啦啦啦</span><span style="float: right;color: #68d8fe;">2020年1月1日</span></a></div>
+                            <div style="line-height: 30px;"><a href="./跳转页面/html/video-5.html"><span style="color: #9ea8c5">啦啦啦啦德玛西亚啦啦啦啦啦啦啦啦啦</span><span style="float: right;color: #68d8fe;">2020年1月1日</span></a></div>
+                        </div>
+                        <div><a href="#"><span style="color: #c48714;">点击进入标题</span></a><span style="float: right;color: #80838e;">更多</span></div>
+                     </div>
+                  </div>
+                  <!-- 中下-右 -->
+                  <div class="bottom-right shadow" style="flex: 1;border: 1px solid #1a3f81;position: relative;border-radius: 20px;">
+                    <div style="width: 20px;height: 20px;position: absolute;top: -2px;left: -2px;"><img src="./Images/贴角图/中上左.png" alt="" style="width: 100%;height: 100%;"></div>
+                    <div style="width: 20px;height: 20px;position: absolute;top: -2px;right: -2px;"><img src="./Images/贴角图/中上右.png" alt="" style="width: 100%;height: 100%;"></div>
+                    <div style="width: 20px;height: 20px;position: absolute;bottom: -2px;left: -2px;"><img src="./Images/贴角图/中下左.png" alt="" style="width: 100%;height: 100%;"></div>
+                    <div style="width: 20px;height: 20px;position: absolute;bottom: -2px;right: -2px;"><img src="./Images/贴角图/中下右.png" alt="" style="width: 100%;height: 100%;"></div>
+                    <div class="main-bottom-left">
+                        <!-- 1 -->
+                        <div style="color: #68d8fe; font-size: 16px;">
+                            <span style="color: white;">栏目标题</span>
+                        </div>
+                        <!-- 2 -->
+                        <div>
+                            <hr style="height:1px;border:none;border-top:1px solid #1a3f81;" />
+                        </div>
+                        <!-- 3 -->
+                        <div class="one three" style=" height: 28px;line-height: 28px; background-color: #0f2559;color: #68d8fe;font-size: 14px;">
+                            <div class="tab tab1 tabactive" style="font-size: 12px;">
+                                <span class="active">二级栏目</span>
+                                <span>|</span>
+                                <span>二级栏目</span>
+                                <span>|</span>
+                                <span>二级栏目</span>
+                            </div>
+                        </div>
+                        <!-- 4 -->
+                        <div id="text2">
+                            <div style="line-height: 30px;"><a href="./跳转页面/html/video-1.html"><span style="color: #9ea8c5">啦啦啦啦德玛西亚啦啦啦啦啦啦啦啦啦</span><span style="float: right;color: #68d8fe;">2020年1月1日</span></a></div>
+                            <div style="line-height: 30px;"><a href="./跳转页面/html/video-2.html"><span style="color: #9ea8c5">啦啦啦啦德玛西亚啦啦啦啦啦啦啦啦啦</span><span style="float: right;color: #68d8fe;">2020年1月1日</span></a></div>
+                            <div style="line-height: 30px;"><a href="./跳转页面/html/video-3.html"><span style="color: #9ea8c5">啦啦啦啦德玛西亚啦啦啦啦啦啦啦啦啦</span><span style="float: right;color: #68d8fe;">2020年1月1日</span></a></div>
+                            <div style="line-height: 30px;"><a href="./跳转页面/html/video-4.html"><span style="color: #9ea8c5">啦啦啦啦德玛西亚啦啦啦啦啦啦啦啦啦</span><span style="float: right;color: #68d8fe;">2020年1月1日</span></a></div>
+                            <div style="line-height: 30px;"><a href="./跳转页面/html/video-5.html"><span style="color: #9ea8c5">啦啦啦啦德玛西亚啦啦啦啦啦啦啦啦啦</span><span style="float: right;color: #68d8fe;">2020年1月1日</span></a></div>
+                        </div>
+                        <div><span style="color: #c48714;">点击进入标题</span><span style="float: right;color: #80838e;">更多</span></div>
+                     </div>
+                </div>
+                </div>
+            </div>
+                <!-- 中间右边板块 -->
+            <div class="main-right">
+               <!-- 右上 -->
+               <div class="shadow" style="width: 460px;height: 466px;border: 1px solid #1a3f81;position: relative;border-radius: 20px;">
+                <div style="width: 20px;height: 20px;position: absolute;top:-1px;left: -1px;"><img src="./Images/贴角图/左上左.png" alt="" style="width: 100%;height: 100%;"></div>
+                    <div style="width: 20px;height: 20px;position:absolute;top:-2px;right:-2px"><img src="./Images/贴角图/左上右.png" alt="" style="width: 100%;height: 100%;"></div>
+                    <div style="width: 20px;height: 20px;position:absolute;bottom:-2px;left:-2px"><img src="./Images/贴角图/左下左.png" alt="" style="width: 100%;height: 100%;"></div>
+                    <div style="width: 20px;height: 20px;position:absolute;bottom:-2px;right:-2px"><img src="./Images/贴角图/左下右.png" alt="" style="width: 100%;height: 100%;"></div>
+                <div class="main-left-containertop">
+                    <!-- 1 -->
+                    <div style="color: #68d8fe; font-size: 16px;">
+                        <span style="color: white;">栏目标题</span>
+                    </div>
+                    <!-- 2 -->
+                    <div>
+                        <hr style="height:1px;border:none;border-top:1px solid #1a3f81;" />
+                    </div>
+                    <!-- 3 -->
+                    <div class="echer">
+                        <div style="margin-right: 10px;"><img src="./Images/echart_03.png" alt=""></div>
+                        <div style="margin-right: 10px;"><img src="./Images/echart_05.png" alt=""></div>
+                        <div><img src="./Images/echart_07.png" alt=""></div>
+                    </div>
+                    <!-- 4 -->
+                    <div style="margin-top: 10px;"><img src="./Images/进度条.png" alt="" style="width: 100%;height: 100%;"></div>
+                </div>
+            </div>
+               <!-- 右下 -->
+               <div class="shadow" style="width: 460px;height: 364px;border: 1px solid #1a3f81;margin-top:16px;position: relative;border-radius: 20px;">
+                <div style="width: 20px;height: 20px;position: absolute;top: -1px;left: -1px;"><img src="./Images/贴角图/左上左.png" alt=""></div>
+                <div style="width: 20px;height: 20px;position:absolute;top:-3px;right:-2px"><img src="./Images/贴角图/左上右.png" alt="" style="width: 100%;height: 100%;"></div>
+                <div style="width: 20px;height: 20px;position: absolute;bottom: -2px;left: -2px;"><img src="./Images/贴角图/左下左.png" alt="" style="width: 100%;height: 100%;"></div>
+                <div style="width: 20px;height: 20px;position: absolute;bottom: -2px;right: -2px;"><img src="./Images/贴角图/左下右.png" alt="" style="width: 100%;height: 100%;"></div>
+                <div class="main-left-containerbottom">
+                    <!-- 1 -->
+                    <div style="color: #68d8fe; font-size: 16px;">
+                        <span style="color: white;">栏目标题</span>
+                    </div>
+                    <!-- 2 -->
+                    <div>
+                        <hr style="height:1px;border:none;border-top:1px solid #1a3f81;" />
+                    </div>
+                    <!-- 3 -->
+                    <div class="one three" style=" height: 28px;line-height: 28px; background-color: #0f2559;color: #68d8fe;font-size: 14px;">
+                        <div class="tab tab1 tabactive" style="font-size: 12px;">
+                            <span class="active">栏目标题</span>
+                            <span>|</span>
+                            <span>栏目标题</span>
+                            <span>|</span>
+                            <span>栏目标题</span>
+                        </div>
+                    </div>
+                    <!-- 4 -->
+                    <div id="text3">
+                        <div style="line-height: 35px;"><span style="color: #9ea8c5">啦啦啦啦德玛西亚啦啦啦啦啦啦啦啦啦</span><span style="float: right;color: #68d8fe;">2020年1月1日</span></div>
+                        <div style="line-height: 35px;"><span style="color:#9ea8c5;">啦啦啦啦德玛西亚啦啦啦啦德玛西亚</span><span style="float: right;color: #68d8fe;">2020年1月1日</span></div>
+                        <div style="line-height: 35px;"><span style="color:#9ea8c5">啦啦啦啦德玛西亚啦啦啦啦德玛西亚</span><span style="float: right;color: #68d8fe;">2020年1月1日</span></div>
+                        <div style="line-height: 35px;"><span style="color: #9ea8c5">啦啦啦啦德玛西亚啦啦啦啦德玛西亚</span><span style="float: right;color: #68d8fe;">2020年1月1日</span></div>
+                        <div style="line-height: 35px;"><span style="color: #9ea8c5;">啦啦啦啦德玛西亚啦啦啦啦德玛西亚</span><span style="float: right;color: #68d8fe;">2020年1月1日</span></div>
+                        <div style="line-height: 35px;"><span style="color: #9ea8c5;">啦啦啦啦德玛西亚啦啦啦啦德玛西亚</span><span style="float: right;color: #68d8fe;">2020年1月1日</span></div>
+                        <div style="line-height: 35px;"><span style="color:#9ea8c5">啦啦啦啦德玛西亚啦啦啦啦德玛西亚</span><span style="float: right;color: #68d8fe;">2020年1月1日</span></div>
+                    </div>
+                    <div style="margin-top: 5px;"><span style="float: right;color: #80838e;">更多</span></div>
+                </div>
+               </div>
+            </div>
+        </div>
+        <!-- 底部 -->
+        <div class="Footer">
+            <div><img src="./Images/军徽1.png" alt=""></div>
+            <div><img src="./Images/军徽2.png" alt=""></div>
+            <div><img src="./Images/军徽3.png" alt=""></div>
+            <div><img src="./Images/军徽4.png" alt=""></div>
+            <div><img src="./Images/军徽5.png" alt=""></div>
+            <div><img src="./Images/军徽6.png" alt=""></div>
+            <div><img src="./Images/军徽7.png" alt=""></div>
+            <div><img src="./Images/军徽8.png" alt=""></div>
+            <div><img src="./Images/军徽9.png" alt=""></div>
+            <div><img src="./Images/军徽10.png" alt=""></div>
+            <div><img src="./Images/军徽11.png" alt=""></div>
+            <div><img src="./Images/军徽12.png" alt=""></div>
+            <div><img src="./Images/右下角.png" alt="" style="position: absolute;left: 70px;"></div>
+        </div>
+       </div>
+    </div>
+</body>
+</html>
+<script src="./js/jquery-2.0.3.min.js"></script>
+<script src="./swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript">
+//获取name显示到用户名，$('#name').html(name)渲染到页面里，就是动态的用户名
+var name = localStorage.getItem('bindkey')
+$('#name').html(name)
+
+for (let i = 0; i < document.querySelectorAll('.two span').length; i++) {
+        let btn = document.querySelectorAll('.two span')[i];
+        btn.addEventListener('click', function () {
+            clearactive(this.parentNode);
+            oneclick(this);
+            hiddenitem(document.querySelector('.three'))
+            showitem(this);
+        });
+        if (i == 0) {
+            defaultactive(btn);
+        }
+    }
+    /*二行*/
+    for (let i = 0; i < document.querySelectorAll('.tab span').length; i++) {
+        let btn = document.querySelectorAll('.tab span')[i];
+        btn.addEventListener('click', function () {
+            clearactive(this.parentNode);
+            clearactive(this.parentNode.parentNode);
+            oneclick(this);
+        });
+    }
+    /* 添加acticve */
+    function oneclick(that) {
+        that.classList.add('active');
+    }
+    /* 清理所在级别所有的acticve */
+    function clearactive(that) {
+        for (let i = 0; i < that.querySelectorAll('.active').length; i++) {
+            let btn = that.querySelectorAll('.active')[i];
+            btn.classList.remove('active');
+        }
+    }
+    /*添加默认的active*/
+    function defaultactive(that) {
+        that.classList.add('active');
+    }
+    /* 显示下级内容 */
+    function showitem(that) {
+        document.querySelector('.tab' + that.getAttribute('data-type')).style.display = 'block';
+        clearactive(document.querySelector('.tab' + that.getAttribute('data-type')));
+        oneclick(document.querySelector('.tab' + that.getAttribute('data-type')).children[0]);
+
+    }
+    /* 设置隐藏内容 */
+    function hiddenitem(that) {
+        for (let i = 0; i < that.children.length; i++) {
+            let btn = that.children[i];
+            btn.style.display = 'none';
+        }
+    }
+    //轮播图
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+      spaceBetween: 10,
+      slidesPerView: 4,
+      loop: true,
+      freeMode: true,
+      loopedSlides: 5, //looped slides should be the same
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+    });
+    var galleryTop = new Swiper('.gallery-top', {
+      spaceBetween: 10,
+      loop: true,
+      loopedSlides: 5, //looped slides should be the same
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      thumbs: {
+        swiper: galleryThumbs,
+      },
+    });
+</script>
